@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.998" height="40.096" viewBox="0 0 38.998 40.096">
+  <defs>
+    <filter id="Setting-01" x="0" y="0" width="38.998" height="40.096" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="icon" transform="translate(-45.5 -967.5)">
+    <g transform="matrix(1, 0, 0, 1, 45.5, 967.5)" filter="url(#Setting-01)">
+      <path id="Setting-01-2" data-name="Setting-01" d="M29.244,18.51a5.952,5.952,0,0,1,2.184-8.081L28.366,5.135a5.949,5.949,0,0,1-2.977.777A5.9,5.9,0,0,1,21.2,4.19,5.9,5.9,0,0,1,19.462,0H13.376A6,6,0,0,1,12.6,2.981,5.934,5.934,0,0,1,4.5,5.135L1.43,10.429a5.9,5.9,0,0,1,2.184,2.157A5.921,5.921,0,0,1,1.43,20.667l3.043,5.294a5.747,5.747,0,0,1,2.946-.777A5.892,5.892,0,0,1,13.31,31.1h6.121a5.777,5.777,0,0,1,.777-2.946,5.922,5.922,0,0,1,8.08-2.157L31.331,20.7a6.328,6.328,0,0,1-2.087-2.188Zm-12.825,3.3a6.254,6.254,0,1,1,4.439-1.826,6.277,6.277,0,0,1-4.439,1.826Z" transform="translate(3.07 1.5)" fill="#cecece"/>
+    </g>
+  </g>
+</svg>

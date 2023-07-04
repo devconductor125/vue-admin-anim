@@ -1,0 +1,219 @@
+<template>
+  <div
+    ref="content__wrapper"
+    class="content__tabs flex flex-wrap bg-white items-center rounded-lg sm:rounded-full h-10 shadow lg:mt-0 sm:w-max"
+  >
+    <div
+      :class="activeComponent === 'green-star-transfer' ? 'active' : ''"
+      class="tab cursor-pointer rounded-full text-center h-full px-4 py-2"
+      @click="showTabMenu('green-star-transfer')"
+      data-index="0"
+    >
+      <span class="pointer-events-none">Transfer</span>
+
+      <span
+        class="background__circle pointer-events-none"
+        :class="getAnimationClass(0)"
+      ></span>
+    </div>
+    <div
+      :class="activeComponent === 'green-star-sweep' ? 'active' : ''"
+      class="tab cursor-pointer rounded-full text-center h-full px-4 py-2"
+      @click="showTabMenu('green-star-sweep')"
+      data-index="1"
+    >
+      <span class="pointer-events-none">Sweep</span>
+
+      <span
+        class="background__circle pointer-events-none"
+        :class="getAnimationClass(1)"
+      ></span>
+    </div>
+    <div
+      :class="activeComponent === 'green-star-bill-pay' ? 'active' : ''"
+      class="tab cursor-pointer rounded-full text-center h-full px-4 py-2"
+      @click="showTabMenu('green-star-bill-pay')"
+      data-index="2"
+    >
+      <span class="pointer-events-none">Bill Pay</span>
+
+      <span
+        class="background__circle pointer-events-none"
+        :class="getAnimationClass(2)"
+      ></span>
+    </div>
+    <div
+      :class="activeComponent === 'green-star-send' ? 'active' : ''"
+      class="tab cursor-pointer rounded-full text-center h-full px-4 py-2"
+      @click="showTabMenu('green-star-send')"
+      data-index="3"
+    >
+      <span class="pointer-events-none">Send</span>
+
+      <span
+        class="background__circle pointer-events-none"
+        :class="getAnimationClass(3)"
+      ></span>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      activeComponent: "green-star-transfer",
+      activeOldIndex: 0,
+      activeCurrentIndex: 0,
+    };
+  },
+  methods: {
+    getAnimationClass(index) {
+      let animationClass = "";
+      if (this.activeCurrentIndex === index && this.activeOldIndex < index) {
+        animationClass = "slide-left";
+      } else if (
+        this.activeCurrentIndex === index &&
+        this.activeOldIndex > index
+      ) {
+        animationClass = "slide-right";
+      } else if (this.activeCurrentIndex < index) {
+        animationClass = "slide-left";
+      } else if (this.activeCurrentIndex > index) {
+        animationClass = "slide-right";
+      }
+      return animationClass;
+    },
+
+    showTabMenu(componentName) {
+      const tabWrapper = event.target.closest(".content__tabs");
+      const oldActiveTab = tabWrapper.querySelector(".tab.active");
+      if (componentName != this.activeComponent) {
+        this.activeOldIndex = oldActiveTab.dataset.index;
+        const activeCurrentIndex = event.target.dataset.index;
+
+        setTimeout(() => {
+          this.activeCurrentIndex = activeCurrentIndex;
+          this.activeComponent = componentName;
+          this.$emit("change", this.activeComponent);
+        }, 500);
+      } else {
+        this.activeOldIndex = oldActiveTab.dataset.index;
+
+        setTimeout(() => {
+          this.activeCurrentIndex = 0;
+          this.activeComponent = "green-star-transfer";
+          this.$emit("change", this.activeComponent);
+        }, 500);
+      }
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.content__tabs {
+  .tab {
+    @apply relative overflow-hidden;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    > span {
+      position: relative;
+      transition: color 0.5s ease-in-out;
+      z-index: 10;
+      @apply text-orange-900;
+    }
+    .background__circle {
+      top: 0px;
+      left: 0px;
+      // transform: translateX(-101%);
+      // -ms-transform: translateX(-101%); /* IE 9 */
+      // -webkit-transform: translateX(-101%);
+      transition: transform 0.5s ease-in-out;
+      z-index: 1;
+      @apply absolute h-full w-full rounded-full inline-block bg-orange-900 text-gray-dark;
+      &.slide-left {
+        transform: translateX(-101%);
+        -ms-transform: translateX(-101%); /* IE 9 */
+        -webkit-transform: translateX(-101%);
+      }
+      &.slide-right {
+        transform: translateX(101%);
+        -ms-transform: translateX(101%); /* IE 9 */
+        -webkit-transform: translateX(101%);
+      }
+    }
+
+    &.active {
+      > span {
+        @apply text-gray-100;
+      }
+      .background__circle {
+        transform: translateX(0%);
+        -ms-transform: translateX(0%); /* IE 9 */
+        -webkit-transform: translateX(0%);
+      }
+    }
+  }
+}
+
+.slideIn-enter-active,
+.slideIn-leave-active {
+  transition: opacity 0.6s ease-out, transform 0.6s ease-in;
+}
+
+.slideIn-enter,
+.slideIn-leave-to {
+  opacity: 0.3;
+  transform: translateX(100%);
+}
+
+.slideIn-enter-to,
+.slideIn-leave {
+  opacity: 1;
+  transform: translateX(0);
+}
+.cashflow__access__button,
+.cashflow__content__tabs {
+  .tab {
+    @apply relative overflow-hidden;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    > span {
+      position: relative;
+      transition: color 0.5s ease-in-out;
+      z-index: 10;
+      @apply text-orange-900;
+    }
+    .background__circle {
+      top: 0px;
+      left: 0px;
+      // transform: translateX(-101%);
+      // -ms-transform: translateX(-101%); /* IE 9 */
+      // -webkit-transform: translateX(-101%);
+      transition: transform 0.5s ease-in-out;
+      z-index: 1;
+      @apply absolute h-full w-full rounded-full inline-block bg-orange-900 text-gray-dark;
+      &.slide-left {
+        transform: translateX(-101%);
+        -ms-transform: translateX(-101%); /* IE 9 */
+        -webkit-transform: translateX(-101%);
+      }
+      &.slide-right {
+        transform: translateX(101%);
+        -ms-transform: translateX(101%); /* IE 9 */
+        -webkit-transform: translateX(101%);
+      }
+    }
+
+    &.active {
+      > span {
+        @apply text-white;
+      }
+      .background__circle {
+        transform: translateX(0%);
+        -ms-transform: translateX(0%); /* IE 9 */
+        -webkit-transform: translateX(0%);
+      }
+    }
+  }
+}
+</style>

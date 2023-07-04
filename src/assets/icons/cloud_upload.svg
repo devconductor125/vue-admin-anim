@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 55" width="80" height="55">
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M-1585 -635L335 -635L335 445L-1585 445Z" />
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #0a82d5 } 
+	</style>
+	<g id="Contact Us – 6" clip-path="url(#cp1)">
+		<g id="upload">
+			<path id="ic_cloud_upload_24px" fill-rule="evenodd" class="shp0" d="M80 37.67C80 46.87 72.53 54.33 63.33 54.33L20 54.33C8.97 54.33 0 45.37 0 34.33C0 24.03 7.8 15.53 17.83 14.47C22 6.47 30.37 1 40 1C52.13 1 62.23 9.63 64.5 21.13C73.17 21.73 80 28.87 80 37.67ZM56.67 31L40 14.33L23.33 31L33.33 31L33.33 44.33L46.67 44.33L46.67 31L56.67 31Z" />
+		</g>
+	</g>
+</svg>

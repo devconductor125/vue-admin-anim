@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: "Neuton", serif !important;
+}
+
+.card{
+    @apply p-4 rounded-xl shadow-md;
+}
+
+.card__title{
+    @apply mb-2;
+}
+
+.card__footer{
+    @apply mt-2;
+}
+
+.slideIn-enter-active,
+.slideIn-leave-active {
+  transition: opacity 0.6s ease-out, transform 0.6s ease-in;
+}
+
+.slideIn-enter,
+.slideIn-leave-to {
+  opacity: 0.3;
+  transform: translateX(100%);
+}
+
+.slideIn-enter-to,
+.slideIn-leave {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.fadeIn-enter-active,
+.fadeIn-leave-active {
+  transition: opacity 0.6s ease-in-out;
+}
+
+.fadeIn-enter,
+.fadeIn-leave-to {
+  opacity: 0.3;
+}
+
+.fadeIn-enter-to,
+.fadeIn-leave {
+  opacity: 1;
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39" height="33.383" viewBox="0 0 39 33.383">
+  <defs>
+    <filter id="Path_37" x="0" y="0" width="39" height="30.399" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_44" x="7.488" y="22.238" width="24.014" height="11.144" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-2"/>
+      <feFlood flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="icon" transform="translate(4.5 -5.99)">
+    <g transform="matrix(1, 0, 0, 1, -4.5, 5.99)" filter="url(#Path_37)">
+      <path id="Path_37-2" data-name="Path 37" d="M0,7.49v21.4H30V7.49Zm14.205,8.775a3.68,3.68,0,0,1-.263,1.5h-1.77a5.054,5.054,0,0,0,.191-1.5,6.088,6.088,0,0,0-.071-.888h1.819a4.219,4.219,0,0,1,.094.888Zm-.263-1.593h-1.77A6.514,6.514,0,0,0,10.519,11.7,4.529,4.529,0,0,1,13.943,14.672Zm-2.19,1.593a4.5,4.5,0,0,1-.217,1.5H7.665a4.519,4.519,0,0,1-.214-1.5,5.178,5.178,0,0,1,.082-.888h4.125a5.583,5.583,0,0,1,.094.888ZM9.6,11.684a6.117,6.117,0,0,1,1.939,3H7.665a6.11,6.11,0,0,1,1.935-3Zm-.915,0a6.446,6.446,0,0,0-1.654,2.976H5.25A4.522,4.522,0,0,1,8.685,11.7Zm-3.69,4.58a4.215,4.215,0,0,1,.1-.888H6.911a5.62,5.62,0,0,0-.075.888,4.92,4.92,0,0,0,.195,1.5H5.25A3.612,3.612,0,0,1,4.995,16.265Zm.536,2.065H7.215A5.742,5.742,0,0,0,8.685,20.7,4.425,4.425,0,0,1,5.531,18.33ZM9.6,20.7A5.465,5.465,0,0,1,7.875,18.33h3.461A5.5,5.5,0,0,1,9.6,20.7ZM12,18.33h1.68A4.429,4.429,0,0,1,10.53,20.7,5.821,5.821,0,0,0,12,18.33Zm14.066,2.114h-1.56V18.653l-4.631,4.655L17.558,20.98l-4.1,4.123-1.08-1.113,5.186-5.2,2.333,2.294,3.559-3.595h-1.9V16.077h4.5Z" transform="translate(4.5 -5.99)" fill="#cecece"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -4.5, 5.99)" filter="url(#Rectangle_44)">
+      <rect id="Rectangle_44-2" data-name="Rectangle 44" width="15.013" height="2.144" transform="translate(11.99 23.74)" fill="#cecece"/>
+    </g>
+  </g>
+</svg>
